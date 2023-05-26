@@ -7,12 +7,16 @@ import pandas as pd
 import json
 import tensorflow as tf
 from keras.models import Sequential
+# from keras.models import Sequential
 from keras.layers import Conv2D, ZeroPadding2D, Activation, MaxPooling2D, AveragePooling2D, Input, concatenate
 from keras.models import Model
-from keras.layers.normalization import BatchNormalization 
-from keras.layers.merge import Concatenate
+# from keras.layers import BatchNormalization 
+from keras.layers import BatchNormalization
+# from keras.layers.merge import Concatenate
+from keras.layers import Concatenate
 from keras.layers.core import Lambda, Flatten, Dense
-from keras.engine.topology import Layer
+# from keras.engine.topology import 
+from keras.layers import Layer
 from keras import backend as K
 from keras_openface import utils
 from keras_openface.utils import LRN2D
@@ -286,3 +290,10 @@ if __name__ == "__main__" :
       input_embeddings = create_input_image_embeddings()
       print(input_embeddings)
       np.save("embeddings.npy",input_embeddings)
+
+
+# import keras
+# import tensorflow as tf
+
+# print('Keras version:', keras.__version__)
+# print('TensorFlow version:', tf.__version__)
